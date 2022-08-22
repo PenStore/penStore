@@ -1,14 +1,5 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pen Store</title>
-    <link rel="stylesheet" href="{{ asset('style.css') }}">
-    
-</head>
-<body>
+@extends('layouts.app')
+@section('nav')
     <div class="topdiv">
         <div class="alertbox">Alert</div>
         <div class="navbar">
@@ -36,6 +27,8 @@
             </div>
         </div>
     </div>
+@endsection
+@section('content')
     <div class="cover_photo">
         <h1>Heading1</h1>
         <h2>Heading2</h2>
@@ -55,5 +48,4 @@
             </div>
         </div>
     </div>
-</body>
-</html>
+@endsection

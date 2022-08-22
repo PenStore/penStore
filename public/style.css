@@ -1,0 +1,44 @@
+body {
+  width: 600px;
+  margin: 0px;
+}
+
+.alertbox {
+  padding: 8px;
+  text-align: center;
+}
+
+.navbar {
+  height: 60px;
+  display: flex;
+}
+
+.cover_photo {
+  height: 400px;
+  background-color: gray;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.cover_photo h1 {
+  color: white;
+  text-align: center;
+}
+.cover_photo h2 {
+  color: white;
+  text-align: center;
+}
+.cover_photo button {
+  width: 80px;
+  height: 40px;
+  background-color: transparent;
+  border-color: white;
+  color: white;
+}
+
+.about {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}/*# sourceMappingURL=style.css.map */

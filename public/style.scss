@@ -11,6 +11,32 @@ body {
 .navbar {
     height: 60px;
     display: flex;
+    justify-content: space-between;
+    align-items: center;
+    &__left {
+        display: flex;
+        align-items: center;
+        width: 70px;
+        padding-left:5px;
+    }
+
+    &__midle {
+        padding: 8px 0;
+        width: 90px;
+    }
+
+    &__right {
+        width: 70px;
+        padding-right: 5px;
+        div{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            .basket{
+                width: 40px;
+            }
+        }
+    }
 }
 
 .cover_photo {
@@ -41,5 +67,5 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: space-around;
-    
+
 }

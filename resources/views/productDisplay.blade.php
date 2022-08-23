@@ -36,6 +36,8 @@
                     <button>+</button>
                 </div>
             </div>
+            <a href="">Add to cart</a>
+            <a href="">Buy it now</a>
         </div>
 
     </section>

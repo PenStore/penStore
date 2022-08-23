@@ -1,7 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head>
+<<<<<<< HEAD
+
+  <head>
   <meta charset="utf-8" />
   <link rel="apple-touch-icon" sizes="76x76" href="{{ asset('assets') }}/img/apple-icon.png">
   <link rel="icon" type="image/png" href="{{ asset('assets') }}/img/favicon.png">
@@ -19,6 +21,17 @@
   <link href="{{ asset('assets') }}/css/now-ui-dashboard.css?v=1.3.0" rel="stylesheet" />
   <!-- CSS Just for demo purpose, don't include it in your project -->
   <link href="{{ asset('assets') }}/demo/demo.css" rel="stylesheet" />
+=======
+    <!-- Fonts -->
+    <link rel="dns-prefetch" href="//fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
+    <link rel="stylesheet" href="{{ asset('style.css') }}">
+
+    <!-- Scripts -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    @viteReactRefresh
+    @vite(['resources/sass/app.scss', 'resources/js/app.js', 'resources/js/page.js'])
+>>>>>>> 50f43a6c26306cc54631be94e32ff638048d824c
 </head>
 <<<<<<< HEAD
 =======

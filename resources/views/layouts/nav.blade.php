@@ -1,11 +1,44 @@
+<style>
+    .nav {
+    margin-bottom: 0;
+    }
+    #dropdown-menu {
+        position: absolute;
+        display: none;
+        border: solid red 5px;
+        margin-top: 120px;
+    }
+    
+
+    /* .nav>li.dropdown.open {
+        position: static;
+    }
+
+    .nav>li.dropdown.open .dropdown-menu {
+        width: 100%;
+        text-align: center;
+        left: 0;
+        right: 0;
+        display: flex;
+        flex-direction: colummn;
+    }
+
+    .dropdown-menu>li {
+    } */
+</style>
 <div class="topdiv">
     <div class="alertbox">Alert</div>
     <div class="navbar">
         <div class="navbar__left">
-            <div>
-                <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path fill-rule="evenodd" clip-rule="evenodd" d="M29.5 12H11V11H29.5V12ZM29.5 20H11V19H29.5V20ZM11 28H29.5V27H11V28Z" fill="black"/>
+            <a class="dropdown-toggle" id="toggleDropdown">
+                <svg width="19" height="17" viewBox="0 0 19 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M18.5 1H0V0H18.5V1ZM18.5 9H0V8H18.5V9ZM0 17H18.5V16H0V17Z" fill="black"/>
                 </svg>
+            </a>
+            <div id="dropdown-menu">
+                <p>asd</p>
+                <p>asd</p>
+                <p>asd</p>
             </div>
         </div>
         <div class="navbar__midle">
@@ -25,3 +58,18 @@
         </div>
     </div>
 </div>
+
+<script>
+    document.getElementById("toggleDropdown").addEventListener("click", toggleDropdown);
+
+    function toggleDropdown() {
+        console.log("asd")
+        let toggleDropdown = document.getElementById("dropdown-menu")
+        if (toggleDropdown.style.display === "block") {
+            toggleDropdown.style.display = "none"
+        } else {
+            toggleDropdown.style.display = "block"
+        }
+        
+    }
+</script>

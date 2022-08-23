@@ -20,6 +20,32 @@ body {
   width: 70px;
   padding-left: 5px;
 }
+.navbar__left div#nav {
+  position: relative;
+}
+.navbar__left div#nav .a {
+  padding: 5px 15px 5px;
+}
+.navbar__left .dropdown-toggle {
+  padding: 0;
+  background: white;
+}
+.navbar__left ul.dropdown {
+  display: none;
+  position: absolute;
+  top: 100%;
+  margin-top: 5px;
+  padding: 5px 5px 0 0;
+  background-color: white;
+}
+.navbar__left ul.dropdown li {
+  list-style-type: none;
+}
+.navbar__left ul.dropdown li a {
+  text-decoration: none;
+  padding: 0rem 1rem;
+  display: block;
+}
 .navbar__midle {
   padding: 8px 0;
   width: 90px;
@@ -57,6 +83,7 @@ body {
   width: 80px;
   height: 40px;
   background-color: transparent;
+  border: 2px solid;
   border-color: white;
   color: white;
 }

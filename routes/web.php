@@ -16,3 +16,12 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+Route::get('/products', function () {
+    return 'products';
+});
+Route::get('/cart', function () {
+    return 'cart';
+});
+
+use App\Http\Controllers\AdminProduct;
+Route::get('/admin/add-product', [AdminProduct::class, "addProduct"]);

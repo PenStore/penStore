@@ -9,14 +9,25 @@
         <h1>Title1</h1>
         <h2>title2</h2>
     </div>
-    <div class="products">
-        <div class="products__card">
-            <div class="photo"></div>
-            <div class="info_box">
-                <div class="product__name">Product name</div>
-                <div class="old_price">999$</div>
-                <div class="curent_price">777$</div>
+    @foreach ($products as $item)
+        <div class="products">
+            <div class="products__card">
+                <div class="photo">
+                    @if($item->image !== null)
+                        <img src="{{$item->image}}" style="width:200px; height: 200px" alt="">
+                    @endif
+                </div>
+                <div class="info_box">
+                    <div class="product__name">{{$item->name}}</div>
+                    @if($item->sale_price !== null)
+                        <div class="old_price" style="text-decoration: line-through;">{{$item->price}}</div>
+                        <div class="curent_price">{{$item->sale_price}}</div>
+                    @else
+                        <div class="old_price">{{$item->price}}</div>
+                    @endif
+
+                </div>
             </div>
         </div>
-    </div>
+    @endforeach
 @endsection

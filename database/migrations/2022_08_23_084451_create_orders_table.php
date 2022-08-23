@@ -18,11 +18,11 @@ return new class extends Migration
             $table->integer('user_id');
             $table->integer('product_id');
             $table->integer('quantity');
-            $table->string('ShipAddress');
-            $table->string('ShipCity');
-            $table->string('ShipRegion');
-            $table->string('ShipZip');
-            $table->string('ShipCountry');
+            $table->string('ShipAddress', 45);
+            $table->string('ShipCity', 45);
+            $table->string('ShipRegion', 45);
+            $table->string('ShipZip', 45);
+            $table->string('ShipCountry', 45);
             $table->date('OrderDate');
             $table->float('weight');
             $table->timestamps();

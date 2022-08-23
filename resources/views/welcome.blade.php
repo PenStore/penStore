@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 @extends('layouts.app', [
     'namePage' => 'Welcome',
     'class' => 'login-page sidebar-mini ',
@@ -5,6 +6,9 @@
     'backgroundImage' => asset('assets') . "/img/bg14.jpg",
 ])
 
+=======
+@extends('layouts.app')
+>>>>>>> d6f9f7ae0fe7a1f6d25240876573610ac34151a4
 @section('content')
   <div class="content">
     <div class="container">

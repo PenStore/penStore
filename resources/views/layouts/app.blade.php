@@ -20,6 +20,13 @@
   <!-- CSS Just for demo purpose, don't include it in your project -->
   <link href="{{ asset('assets') }}/demo/demo.css" rel="stylesheet" />
 </head>
+<<<<<<< HEAD
+=======
+<body>
+    <div id="app">
+
+        @include('layouts.nav')
+>>>>>>> d6f9f7ae0fe7a1f6d25240876573610ac34151a4
 
 <body class="{{ $class ?? '' }}">
   <div class="wrapper">

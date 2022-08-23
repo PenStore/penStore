@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Products;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 
 class ProductsController extends Controller
 {
@@ -38,15 +39,16 @@ class ProductsController extends Controller
         //
     }
 
-    /**
-     * Display the specified resource.
-     *
-     * @param  \App\Models\Products  $products
-     * @return \Illuminate\Http\Response
-     */
-    public function show(Products $products)
+    public function show(Request $request)
     {
-        //
+        $product = Products::where('id', '=', $request['id'])->first();
+        $images = DB::table('products')
+        ->join('product_images', 'products.id', 'product_images.product_id')
+        ->select('product_images.image', 'products.name')
+        ->where('products.id', '=', $request['id'])
+        ->get();
+
+        return view('product', ['product' => $product, 'images' => $images]);
     }
 
     /**

@@ -72,6 +72,7 @@
     }
 </style>
 <div class="wrapper">
+    @isset($product)
     <div>
         <div id="myCarousel" class="carousel slide" data-ride="carousel">
             <!-- Indicators -->
@@ -115,6 +116,7 @@
         <button class="add-to-cart">Add to cart</button>
         <button class="add-to-cart" style="background: black; color: white; margin-top: 0">Buy it now</button>
     </div>
+    @endisset
 </div>
 
 <script>

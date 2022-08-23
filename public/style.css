@@ -19,18 +19,30 @@ body {
   justify-content: space-between;
   align-items: center;
 }
-.navbar__left {
+
+.nav-wrapper
+{
   display: flex;
+  justify-content: space-between;
   align-items: center;
-  width: 70px;
+}
+.navbar__left {
+  width: 33.33%;
+  display: flex;
+  justify-content: start;
+  align-items: center;
   padding-left: 5px;
 }
 .navbar__midle {
+  width: 33.33%;
+  display: flex;
+  justify-content: center;
   padding: 8px 0;
-  width: 90px;
 }
 .navbar__right {
-  width: 70px;
+  width: 33.33%;
+  display: flex;
+  justify-content: end;
   padding-right: 5px;
 }
 .navbar__right div {
@@ -71,3 +83,8 @@ body {
   flex-direction: column;
   justify-content: space-around;
 }/*# sourceMappingURL=style.css.map */
+
+#cart
+{
+  margin-left: 21px;
+}

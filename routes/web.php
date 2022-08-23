@@ -1,6 +1,8 @@
 <?php
 
+use App\Http\Controllers\ProductsController;
 use App\Models\Products;
+use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -29,6 +31,7 @@ Route::get('product',function(){
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+<<<<<<< HEAD
 
 Auth::routes();
 
@@ -42,3 +45,6 @@ Route::group(['middleware' => 'auth'], function () {
 	Route::get('{page}', ['as' => 'page.index', 'uses' => 'App\Http\Controllers\PageController@index']);
 });
 
+=======
+Route::get('/product/{id}', [ProductsController::class, 'show']);
+>>>>>>> 4de44d6403802ec47409e889cd7b357358629c6a

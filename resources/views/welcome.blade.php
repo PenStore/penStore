@@ -1,9 +1,9 @@
 @extends('layouts.app')
 @section('content')
     <div class="cover_photo">
-        <h1>Heading1</h1>
-        <h2>Heading2</h2>
-        <button>hello</button>
+        <h1>Writing has never felt so good.</h1>
+        <h2>Pens with style</h2>
+        <button>Catalog</button>
     </div>
     <div class="about">
         <h1>Title1</h1>

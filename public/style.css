@@ -18,36 +18,39 @@ body {
   display: flex;
   align-items: center;
   width: 70px;
-  padding-left: 5px;
 }
-.navbar__left div#nav {
-  position: relative;
-}
-.navbar__left div#nav .a {
-  padding: 5px 15px 5px;
-}
-.navbar__left .dropdown-toggle {
-  padding: 0;
-  background: white;
-}
-.navbar__left ul.dropdown {
-  display: none;
+.navbar__left #dropdown-menu {
+  margin: 0px;
   position: absolute;
-  top: 100%;
-  margin-top: 5px;
-  padding: 5px 5px 0 0;
+  display: none;
   background-color: white;
+  width: 336px;
+  top: 94px;
 }
-.navbar__left ul.dropdown li {
-  list-style-type: none;
+.navbar__left #dropdown-menu p {
+  margin: 30px;
+  font-size: 20px;
 }
-.navbar__left ul.dropdown li a {
+.navbar__left #dropdown-menu .bottom {
+  background-color: #F0F0F0;
+}
+.navbar__left #dropdown-menu .bottom .login_box {
+  padding: 25px;
+  display: flex;
+  gap: 10px;
+}
+.navbar__left #dropdown-menu .bottom .login_box a {
   text-decoration: none;
-  padding: 0rem 1rem;
-  display: block;
+  color: black;
+}
+.navbar__left #dropdown-menu .bottom .social_media {
+  padding: 25px;
+}
+.navbar__left #dropdown-menu .bottom .social_media svg {
+  margin: 0 15px;
 }
 .navbar__midle {
-  padding: 8px 0;
+  margin: 8px 0;
   width: 90px;
 }
 .navbar__right {

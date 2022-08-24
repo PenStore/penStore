@@ -4,10 +4,8 @@
     @include('includes')
 </head>
 <body>
+    @include('admin.layouts.admin_nav')
     <div id="app">
-
-        @include('layouts.nav')
-
         <main class="py-4">
             @yield('content')
         </main>

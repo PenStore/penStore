@@ -4,9 +4,12 @@
 <style>
     img
     {
-        width: 100%;
-        height: 100%;
+        min-width: 100%;
         padding: 20px;
+    }
+    .carousel {
+        width:600px;
+        /* height:360px; */
     }
     .wrapper
     {
@@ -65,43 +68,40 @@
         margin: 15px 0 15px 0;
     }
 
-    .carousel-control
+    .carousel-control-next,
+    .carousel-control-prev
     {
-        background: none !important;
-        color: black;
+        filter: invert(100%); /*make carousel arrows black */
     }
 </style>
 <div class="wrapper">
     @isset($product)
-    <div>
-        <div id="myCarousel" class="carousel slide" data-ride="carousel">
-            <!-- Indicators -->
-            <ol class="carousel-indicators">
-                @foreach($images as $item)
-                    <li data-target="#myCarousel" data-slide-to="{{$loop->index}}" class="@if($loop->index == 0) active @endif"></li>
-                @endforeach
-            </ol>
+    <div id="demo" class="carousel slide" data-bs-ride="carousel">
+
+        <!-- Indicators/dots -->
+        <div class="carousel-indicators">
+            @foreach($images as $item)
+                <button type="button" data-bs-target="#demo" data-bs-slide-to="{{$loop->index}}" class="@if($loop->index == 0) active @endif"></button>
+            @endforeach
+        </div>
         
-            <!-- Wrapper for slides -->
-            <div class="carousel-inner">
-                @foreach($images as $item)
-                    <div class="item @if($loop->index == 0) active @endif">
-                        <img src="{{$item->image}}" alt="{{$item->name}}" style="width:100%;">
-                    </div>
-                @endforeach
-            </div>
+        <!-- The slideshow/carousel -->
+        <div class="carousel-inner">
+            @foreach($images as $item)
+                <div class="carousel-item @if($loop->index == 0) active @endif">
+                    <img src="{{$item->image}}" alt="{{$item->name}}" class="d-block w-100" style="width:100%">
+                </div>
+            @endforeach
+        </div>
         
-            <!-- Left and right controls -->
-            <a class="left carousel-control" href="#myCarousel" data-slide="prev">
-                <span class="glyphicon glyphicon-chevron-left"></span>
-                <span class="sr-only">Previous</span>
-            </a>
-            <a class="right carousel-control" href="#myCarousel" data-slide="next">
-                <span class="glyphicon glyphicon-chevron-right"></span>
-                <span class="sr-only">Next</span>
-            </a>
-            </div>
-    </div>
+        <!-- Left and right controls/icons -->
+        <button class="carousel-control-prev" type="button" data-bs-target="#demo" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon"></span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#demo" data-bs-slide="next">
+          <span class="carousel-control-next-icon"></span>
+        </button>
+      </div>
     <div class="info-wrapper">
         <div class="product-info">
             <span class="product-name">{{$product->name}}</span>

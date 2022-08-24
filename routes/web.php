@@ -1,6 +1,8 @@
 <?php
 
+use App\Http\Controllers\admin\AdminController;
 use App\Http\Controllers\ProductsController;
+use App\Http\Middleware\EnsureUserIsAdmin;
 use App\Models\Products;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Route;
@@ -24,3 +26,4 @@ Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 Route::get('/product/{id}', [ProductsController::class, 'show']);
+Route::get('/admin', [AdminController::class, 'index'])->middleware('isUserAdmin');

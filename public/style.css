@@ -6,8 +6,13 @@ body {
 .alertbox {
   padding: 8px;
   text-align: center;
+  border-bottom: 1px solid;
 }
 
+.topdiv
+{
+  background-color: white;
+}
 .navbar {
   border-top: solid 2px black;
   height: 60px;
@@ -15,10 +20,18 @@ body {
   justify-content: space-between;
   align-items: center;
 }
-.navbar__left {
+
+.nav-wrapper
+{
   display: flex;
+  justify-content: space-between;
   align-items: center;
+}
+.navbar__left {
   width: 33.33%;
+  display: flex;
+  justify-content: start;
+  align-items: center;
 }
 .navbar__left svg {
   margin-left: 10px;
@@ -60,9 +73,18 @@ body {
 }
 .navbar__right {
   width: 33.33%;
-  padding-right: 5px;
+  padding-left: 5px;
+}
+.navbar__midle {
+  width: 33.33%;
   display: flex;
-  justify-content: flex-end;
+  justify-content: center;
+  padding: 8px 0;
+}
+.navbar__right {
+  width: 33.33%;
+  display: flex;
+  justify-content: end;
 }
 .navbar__right div {
   margin-right: 10px;
@@ -133,3 +155,8 @@ body {
   text-align: left;
   padding-top: 5px;
 }/*# sourceMappingURL=style.css.map */
+
+#cart
+{
+  margin-left: 21px;
+}

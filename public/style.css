@@ -9,6 +9,8 @@ body {
 }
 
 .navbar {
+  border-bottom: solid 2px gray;
+  border-top: solid 2px black;
   height: 60px;
   display: flex;
   justify-content: space-between;
@@ -17,7 +19,10 @@ body {
 .navbar__left {
   display: flex;
   align-items: center;
-  width: 70px;
+  width: 33.33%;
+}
+.navbar__left svg {
+  margin-left: 10px;
 }
 .navbar__left #dropdown-menu {
   margin: 0px;
@@ -51,19 +56,21 @@ body {
 }
 .navbar__midle {
   margin: 8px 0;
-  width: 90px;
+  width: 33.33%;
+  text-align: center;
 }
 .navbar__right {
-  width: 70px;
+  width: 33.33%;
   padding-right: 5px;
+  display: flex;
+  justify-content: flex-end;
 }
 .navbar__right div {
+  margin-right: 10px;
   display: flex;
   justify-content: space-between;
   align-items: center;
-}
-.navbar__right div .basket {
-  width: 40px;
+  width: 90px;
 }
 
 .cover_photo {

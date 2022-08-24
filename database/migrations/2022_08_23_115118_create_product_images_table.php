@@ -17,6 +17,7 @@ return new class extends Migration
             $table->id();
             $table->integer('product_id');
             $table->string('image');
+            $table->boolean('main_image')->default(0);
             $table->timestamps();
         });
     }

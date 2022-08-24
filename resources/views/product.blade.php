@@ -11,6 +11,11 @@
         width:600px;
         /* height:360px; */
     }
+
+    #demo
+    {
+        width: 100%;
+    }
     .wrapper
     {
         display: grid;
@@ -73,6 +78,11 @@
     {
         filter: invert(100%); /*make carousel arrows black */
     }
+
+    .description
+    {
+        font-size: 2.5em;
+    }
 </style>
 <div class="wrapper">
     @isset($product)
@@ -89,7 +99,7 @@
         <div class="carousel-inner">
             @foreach($images as $item)
                 <div class="carousel-item @if($loop->index == 0) active @endif">
-                    <img src="{{$item->image}}" alt="{{$item->name}}" class="d-block w-100" style="width:100%">
+                    <img src="{{$item->image}}" alt="{{$item->name}}" class="d-block" style="width:100%">
                 </div>
             @endforeach
         </div>
@@ -115,6 +125,7 @@
         </div>
         <button class="add-to-cart">Add to cart</button>
         <button class="add-to-cart" style="background: black; color: white; margin-top: 0">Buy it now</button>
+        <div class="description">{{$product->description}}</div>
     </div>
     @endisset
 </div>

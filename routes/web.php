@@ -25,7 +25,7 @@ Route::get('/', function () {
 use App\Http\Controllers\AdminProduct;
 Route::get('/admin/add-product', [AdminProduct::class, "addProduct"]);
 Route::get('product',function(){
-	return view('productDisplay');
+	return 'productDisplay';
 });
 
 Auth::routes();

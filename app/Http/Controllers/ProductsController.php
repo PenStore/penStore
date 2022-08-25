@@ -20,7 +20,9 @@ class ProductsController extends Controller
         ->select('product_images.image', 'products.*')
         ->where('product_images.main_image', '=', '1')
         ->get();
-        dd($products);
+        
+        
+        return view('home.catalog', ['products' => $products]);
     }
 
     /**

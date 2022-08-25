@@ -213,10 +213,43 @@
   justify-content: space-between;
 }
 
+.filter-top {
+  width: 100%;
+  height: 50px;
+  padding: 15px;
+  border: 1px solid;
+  display: flex;
+  justify-content: space-between;
+}
+
+.filter-sort, .product-count {
+  font-size: 16px;
+}
+
+.filter-wrapper {
+  width: 100%;
+  background: white;
+  height: 50vh;
+  display: none;
+  z-index: 100;
+  font-size: 16px;
+}
+
+.filter-inner {
+  padding: 22px 32px;
+}
+
+.active {
+  display: block;
+}
+
 @media only screen and (min-width: 200px) {
   #app {
     width: 100%;
     margin: 0px;
+  }
+  .photo {
+    height: 170px;
   }
 }
 @media only screen and (min-width: 630px) {

@@ -1,0 +1,104 @@
+*,*::after,*::before{
+    margin: 0;
+    padding:0;
+    box-sizing: border-box;
+}
+$backgroundgray:rgba(206, 206, 206, 0.795);
+$gray:rgb(104, 103, 103);
+$black:black;
+.about{
+    .flex-img{
+       
+        padding: 1.5rem 0.8rem;
+        display: flex;
+        justify-content: space-evenly;
+        gap: 1rem;
+        align-items: center;
+        flex-direction: column;
+        flex-wrap: wrap;
+        .image{
+            object-fit: contain;
+            width: 95%;
+        }
+    }
+    .about-content{
+        padding: 1rem;
+        display: flex;
+        flex-direction: column;
+        font-size: 1rem;
+        gap:2rem;
+
+        p{
+            line-height: 1.5;
+            color: $gray;
+        }
+    }
+    .promise{
+        background-color: $backgroundgray;
+        padding: 1.5rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap:2rem;
+
+        p{
+            line-height: 1.5;
+            color: $gray;
+            text-align: center;
+        }
+    }
+}
+
+@media screen and (min-width:600px) {
+    .about{
+        .flex-img{
+            width: 100%;
+            flex-direction: row;
+            padding: 1.5rem 0.8rem;
+            display: flex;
+            justify-content: space-evenly;
+            gap: 1rem;
+            align-items: center;
+            flex-wrap: wrap;
+            .image{
+                object-fit: contain;
+                width: 30%;
+            }
+        }
+        .about-content{
+            padding: 3rem 5rem;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            font-size: 1.5rem;
+            background-color: antiquewhite;
+            gap:2rem;
+            h3{
+                align-self: flex-start;
+                font-size: 5rem;
+            }
+            p{
+                line-height: 1.5;
+                color: $gray;
+                text-align:left;
+            }
+        }
+        .promise{
+            background-color: black;
+            color: white;
+            padding: 1.5rem;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap:2rem;
+    
+            p{
+                line-height: 1.5;
+                color: $gray;
+                text-align: center;
+            }
+        }
+
+    }
+}
+

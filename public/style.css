@@ -6,15 +6,13 @@
 .alertbox {
   padding: 8px;
   text-align: center;
+  border-bottom: 1px solid;
 }
 
-<<<<<<< HEAD
-=======
 .topdiv {
   background-color: white;
 }
 
->>>>>>> 7cb85ab0a4b234862f2a9eeae45b677a5f3c8e35
 .navbar {
   border-top: solid 2px black;
   height: 60px;
@@ -22,8 +20,6 @@
   justify-content: space-between;
   align-items: center;
 }
-<<<<<<< HEAD
-=======
 
 .nav-wrapper {
   position: relative;
@@ -32,15 +28,11 @@
   align-items: center;
 }
 
->>>>>>> 7cb85ab0a4b234862f2a9eeae45b677a5f3c8e35
 .navbar__left {
+  width: 33.33%;
   display: flex;
+  justify-content: start;
   align-items: center;
-<<<<<<< HEAD
-  width: 70px;
-  padding-left: 5px;
-=======
->>>>>>> 7cb85ab0a4b234862f2a9eeae45b677a5f3c8e35
 }
 .navbar__left svg {
   margin-left: 10px;
@@ -96,30 +88,21 @@
 }
 
 .navbar__midle {
-<<<<<<< HEAD
-=======
   margin: 8px 0;
   width: 33.33%;
   text-align: center;
   width: 33.33%;
   display: flex;
   justify-content: center;
->>>>>>> 7cb85ab0a4b234862f2a9eeae45b677a5f3c8e35
   padding: 8px 0;
-  width: 90px;
 }
 
 .navbar__right {
-<<<<<<< HEAD
-  width: 70px;
-  padding-right: 5px;
-=======
   width: 33.33%;
   padding-left: 5px;
   width: 33.33%;
   display: flex;
   justify-content: end;
->>>>>>> 7cb85ab0a4b234862f2a9eeae45b677a5f3c8e35
 }
 .navbar__right div {
   margin-right: 10px;
@@ -159,8 +142,6 @@
   display: flex;
   flex-direction: column;
   justify-content: space-around;
-<<<<<<< HEAD
-=======
   align-items: center;
 }
 
@@ -261,5 +242,4 @@
   .photo img {
     height: 250px !important;
   }
->>>>>>> 7cb85ab0a4b234862f2a9eeae45b677a5f3c8e35
 }/*# sourceMappingURL=style.css.map */

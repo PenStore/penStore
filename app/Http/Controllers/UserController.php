@@ -3,18 +3,18 @@
 namespace App\Http\Controllers;
 
 use App\Models\User;
-<<<<<<< HEAD
+
 use App\Http\Requests\UserRequest;
 use Illuminate\Support\Facades\Hash;
-=======
+
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
->>>>>>> 7cb85ab0a4b234862f2a9eeae45b677a5f3c8e35
+
 
 class UserController extends Controller
 {
     /**
-<<<<<<< HEAD
+
      * Display a listing of the users
      *
      * @param  \App\Models\User  $model
@@ -23,11 +23,13 @@ class UserController extends Controller
     public function index(User $model)
     {
         return view('users.index', ['users' => $model->paginate(15)]);
-=======
+    }
+    /** 
      * Display a listing of the resource.
      *
      * @return \Illuminate\Http\Response
      */
+    
     public function index()
     {
         $user = User::where('id', Auth::id())->first();
@@ -98,6 +100,6 @@ class UserController extends Controller
     public function destroy(User $user)
     {
         //
->>>>>>> 7cb85ab0a4b234862f2a9eeae45b677a5f3c8e35
+
     }
 }

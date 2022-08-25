@@ -1,0 +1,64 @@
+*, *::after, *::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.gallery h1 {
+  margin: 1rem;
+  text-transform: capitalize;
+}
+.gallery .flex-img1 {
+  padding: 1rem 0.8rem;
+  display: flex;
+  justify-content: space-evenly;
+  gap: 0.5rem;
+  align-items: center;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+.gallery .flex-img1 .image {
+  -o-object-fit: contain;
+     object-fit: contain;
+  width: 95%;
+}
+.gallery .flex-img2 {
+  padding: 0.1rem 0.8rem;
+  display: flex;
+  justify-content: space-evenly;
+  gap: 0.5rem;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.gallery .flex-img2 .image {
+  -o-object-fit: contain;
+     object-fit: contain;
+  width: 45%;
+}
+.gallery .flex-img3 {
+  padding: 0.2rem 0.8rem;
+  display: flex;
+  justify-content: space-evenly;
+  flex-direction: column;
+  gap: 0.5rem;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.gallery .flex-img3 .image {
+  -o-object-fit: contain;
+     object-fit: contain;
+  width: 95%;
+}
+.gallery .flex-img3 .child {
+  padding: 0.1rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+.gallery .flex-img3 .child .image {
+  -o-object-fit: contain;
+     object-fit: contain;
+  width: 45%;
+}/*# sourceMappingURL=gallery.css.map */

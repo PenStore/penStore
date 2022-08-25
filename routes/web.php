@@ -34,7 +34,7 @@ Route::get('/', function () {
 use App\Http\Controllers\AdminProduct;
 Route::get('/admin/add-product', [AdminProduct::class, "addProduct"]);
 Route::get('product',function(){
-	return view('pages.about');
+	return view('pages.gallery');
 });
 
 Auth::routes();

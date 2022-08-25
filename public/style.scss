@@ -303,10 +303,116 @@
 	display: flex;
 	justify-content: space-between;
 }
+
+.filter{
+	position: relative;
+}
+.filter-top{
+	width: 100%;
+	height: 50px;
+	padding: 15px;
+	border: 1px solid;	
+	display: flex;
+	justify-content: space-between;
+}
+
+.filter-sort, .product-count
+{
+	font-size: 16px;
+}
+
+.filter-wrapper
+{
+	position: absolute;
+	width: 100%;
+    background: white;
+    height: 50vh;
+    display: none;
+    z-index: 100;
+	font-size: 16px;
+}
+
+.filter-option{
+	display: flex;
+	justify-content: space-between;
+	padding: 10px;
+	align-items: center;
+}
+
+.filter-inner
+{
+	padding: 22px 32px;
+	position: relative;
+}
+
+.filter-actions{
+	display: grid;
+    grid-template-columns: 1fr 1fr;
+    position: absolute;
+    gap: 10px;
+    width: 100%;
+    bottom: 6px;
+    justify-content: center;
+    padding: 10px;
+}
+
+.clear{
+	background: none;
+	border: none;
+	text-decoration: underline;
+}
+
+.apply{
+	background: black;
+	color: #fff;
+	border: none;
+
+}
+.filter-actions > button{
+	height: 47px;
+}
+.option-card{
+	display: none;
+	position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 10;
+    background-color: white;
+	left: 0;
+	top: 0;
+	padding: inherit;
+}
+.back{
+	display: flex;
+    align-items: center;
+	margin-bottom: 30px;
+
+	svg{
+		margin-right: 11.5px;
+	}
+}
+.price-range{
+	height: 100px;
+    align-items: center;
+	display: flex;
+	align-items: center;
+}
+
+#slider-range{
+	width: 100% !important;
+}
+.active
+{
+	display: block;
+}
+
 @media only screen and (min-width: 200px) {
 	#app {
 		width: 100%;
 		margin: 0px;
+	}
+	.photo{
+		height: 170px;
 	}
 }
 @media only screen and (min-width: 630px) {
@@ -329,9 +435,7 @@
 	.products {
 		grid-template-columns: repeat(5, 1fr);
 	}
-	.photo {
-		img {
-			height: 250px !important;
-		}
+	.photo{ 
+		height: 250px !important;
 	}
 }

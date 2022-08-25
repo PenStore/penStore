@@ -17,7 +17,7 @@
                     <a href="{{route('showProduct', $item->id)}}">
                         <div class="photo">
                             @if($item->image !== null)
-                                <img src="{{$item->image}}" style="width:100%; height: 200px" alt="">
+                                <img src="{{$item->image}}" style="width:100%; height: 100%" alt="">
                                 @if($item->sale_price !== null)
                                     <div class="sale">Sale</div>
                                 @endif 

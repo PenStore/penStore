@@ -18,9 +18,9 @@
                                     @include('alerts.migrations_check')
                                 </p>
                             </div>
-<<<<<<< HEAD
+
                             <div class="col-lg-5 col-md-6">
-=======
+
                         </div>
 
                         <div class="row mb-3">
@@ -50,7 +50,7 @@
                                 <a class="btn btn-link" href="{{ route('register') }}">
                                     Registration
                                 </a>
->>>>>>> d6f9f7ae0fe7a1f6d25240876573610ac34151a4
+
                             </div>
                         </div>
                     </div>

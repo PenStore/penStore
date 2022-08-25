@@ -5,7 +5,7 @@
 ])
 
 @section('content')
-<<<<<<< HEAD
+
   <div class="content">
     <div class="container">
       <div class="row">
@@ -116,7 +116,7 @@
                     </div>
                   </div>
                   <input class="form-control" placeholder="{{ __('Confirm Password') }}" type="password" name="password_confirmation" required>
-=======
+
 <div class="container">
     <div class="row justify-content-center">
         <div class="col-md-8">
@@ -189,7 +189,7 @@
                             </a>
                         </div>
                     </form>
->>>>>>> d6f9f7ae0fe7a1f6d25240876573610ac34151a4
+
                 </div>
                 <div class="form-check text-left">
                   <label class="form-check-label">

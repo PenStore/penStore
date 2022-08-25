@@ -25,13 +25,13 @@ Route::get('/', function () {
 use App\Http\Controllers\AdminProduct;
 Route::get('/admin/add-product', [AdminProduct::class, "addProduct"]);
 Route::get('product',function(){
-	return 'productDisplay';
+	return view('layouts.footer');
 });
 
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
-<<<<<<< HEAD
+
 
 Auth::routes();
 
@@ -45,6 +45,6 @@ Route::group(['middleware' => 'auth'], function () {
 	Route::get('{page}', ['as' => 'page.index', 'uses' => 'App\Http\Controllers\PageController@index']);
 });
 
-=======
+
 Route::get('/product/{id}', [ProductsController::class, 'show']);
->>>>>>> 4de44d6403802ec47409e889cd7b357358629c6a
+

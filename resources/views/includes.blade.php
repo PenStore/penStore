@@ -22,4 +22,3 @@
 
     
 @viteReactRefresh
-@vite(['resources/sass/app.scss', 'resources/js/app.js', 'resources/js/page.js'])

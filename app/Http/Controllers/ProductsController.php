@@ -86,7 +86,6 @@ class ProductsController extends Controller
             ->join('categories', 'product_categories.category_id', 'categories.id')
             ->select('products.*', 'categories.name as category_name', 'product_images.image');
             // ->orWhere($where_query);
-        
         if(isset($request->sort_by)){
             switch($request->sort_by){
                 case 'best':

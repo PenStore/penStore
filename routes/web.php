@@ -33,7 +33,7 @@ Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 Route::get('/product/{id}', [ProductsController::class, 'show'])->name('showProduct');
-Route::get('/admin', [AdminController::class, 'index']);
+Route::get('/admin', [AdminController::class, 'index'])->middleware('isUserAdmin');
 Route::get('/account', [UserController::class, 'index'])->name('account');
 Route::get('/catalog', [ProductsController::class, 'index'])->name('catalog');
 Route::get('/about', function() {

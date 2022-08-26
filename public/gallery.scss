@@ -1,0 +1,68 @@
+*,*::after,*::before{
+    margin: 0;
+    padding:0;
+    box-sizing: border-box;
+}
+$backgroundgray:rgba(206, 206, 206, 0.795);
+$gray:rgb(104, 103, 103);
+$black:black;
+
+.gallery{
+    h1{
+        margin: 1rem;
+        font-size: 5rem;
+        text-transform: capitalize;
+    }
+    .flex-img1{
+        padding: 1rem 0.8rem;
+        display: flex;
+        justify-content: space-evenly;
+        gap: 0.5rem;
+        align-items: center;
+        flex-direction: column;
+        flex-wrap: wrap;
+        .image{
+            object-fit: contain;
+            width: 95%;
+        }
+    }
+    .flex-img2{
+        padding: 0.1rem 0.2rem;
+        display: flex;
+        justify-content: center;
+        gap: 0.5rem;
+        align-items: center;
+        flex-wrap: wrap;
+        .image{
+            object-fit: contain;
+            width: 45%;
+        }
+    }
+    .flex-img3{
+        padding: 0.2rem 0.8rem;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        gap: 0.5rem;
+        align-items: center;
+        flex-wrap: wrap;
+        .image{
+            object-fit: contain;
+            width: 95%;
+        }
+        .child{
+            padding: 0.3rem;
+            display: flex;
+        
+            align-items: center;
+            gap: 0.8rem;
+            flex-direction: row;
+            flex-wrap: wrap;
+            .image{
+                object-fit: contain;
+                width: 45%;
+            }
+        }
+    }
+  
+}

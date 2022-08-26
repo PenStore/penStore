@@ -12,6 +12,7 @@
                 <p>Black pens</p>
                 <p>Blue pens</p>
                 <p>Red pens</p>
+                <p>About us</p>
                 <div class="bottom">
                     @if(!Auth::check())
                         <div class="login_box">

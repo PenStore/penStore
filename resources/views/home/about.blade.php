@@ -1,4 +1,4 @@
-<link rel="stylesheet" href="{{asset('about.css')}}">
+<link rel="stylesheet" href="about.css">
 <body>
     <section class="about">
         <div class="flex-img">

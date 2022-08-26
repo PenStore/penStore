@@ -1,4 +1,4 @@
-<link rel="stylesheet" href="{{asset(footer.css)}}">
+<link rel="stylesheet" href="footer.css">
 <footer class="footer">
     <div class="wraper-component1">
         <div class="links">

@@ -39,3 +39,6 @@ Route::get('/catalog', [ProductsController::class, 'index'])->name('catalog');
 Route::get('/about', function() {
     return view('home.about');
 });
+Route::get('/gallery', function() {
+    return view('home.gallery');
+});

@@ -1,6 +1,6 @@
 @extends('layouts.app')
 @section('content')
-
+@dd($request->id)
 <style>
     img
     {
@@ -144,6 +144,10 @@
             let quantity = parseInt($(".quantity_val").html());
             quantity += 1;
             $(".quantity_val").html(quantity);
+        });
+
+        $('.add-to-cart').click(function(){
+            alert(1);
         });
     });
 

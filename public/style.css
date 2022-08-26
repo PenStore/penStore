@@ -225,10 +225,12 @@
 .cover_photo h1 {
   color: white;
   text-align: center;
+  padding-bottom: 40px;
 }
 .cover_photo h2 {
   color: white;
   text-align: center;
+  padding-bottom: 40px;
 }
 .cover_photo button {
   width: 80px;

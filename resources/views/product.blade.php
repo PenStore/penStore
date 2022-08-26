@@ -123,7 +123,7 @@
             <span class="quantity_val">1</span>
             <button class="button-quantity" id="plus">+</button>
         </div>
-        <button class="add-to-cart">Add to cart</button>
+        <button class="add-to-cart" onclick="addToCArt()">Add to cart</button>
         <button class="add-to-cart" style="background: black; color: white; margin-top: 0">Buy it now</button>
         <div class="description">{{$product->description}}</div>
     </div>
@@ -146,5 +146,6 @@
             $(".quantity_val").html(quantity);
         });
     });
+
 </script>
 @endsection

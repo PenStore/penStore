@@ -1,0 +1,174 @@
+*, *::after, *::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.footer {
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+}
+.footer .wraper-component1 {
+  padding: 2.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.footer .wraper-component1 .links, .footer .wraper-component1 .infos, .footer .wraper-component1 .brand-mission {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  margin-bottom: 3rem;
+}
+.footer .wraper-component1 .links h4, .footer .wraper-component1 .infos h4, .footer .wraper-component1 .brand-mission h4 {
+  font-size: 2.3rem;
+}
+.footer .wraper-component1 .links a, .footer .wraper-component1 .infos a, .footer .wraper-component1 .brand-mission a {
+  font-size: 1.8rem;
+  text-decoration: none;
+  text-transform: capitalize;
+  color: rgb(104, 103, 103);
+  transition: all 0.3s ease-in-out;
+}
+.footer .wraper-component1 .links a:hover, .footer .wraper-component1 .infos a:hover, .footer .wraper-component1 .brand-mission a:hover {
+  color: black;
+}
+.footer .wraper-component1 .link, .footer .wraper-component1 .info {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+.footer .wraper-component1 .brand-mission p {
+  font-size: 2rem;
+  color: black;
+}
+.footer .wraper-component1 .brand-mission .desktop {
+  display: none;
+}
+.footer .wraper-component2 {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+.footer .wraper-component2 .mail {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  width: 100%;
+  padding: 1rem;
+}
+.footer .wraper-component2 .mail p {
+  font-size: 2rem;
+  color: rgb(104, 103, 103);
+}
+.footer .wraper-component2 .mail .wrap {
+  display: flex;
+  align-items: center;
+  width: 60%;
+  position: relative;
+}
+.footer .wraper-component2 .mail .wrap input[type=email] {
+  font-size: 1.3rem;
+  width: 100%;
+  padding: 1.3rem 1rem;
+  border: 1px solid rgb(104, 103, 103);
+}
+.footer .wraper-component2 .mail .wrap input[type=email]:focus {
+  outline-color: black;
+}
+.footer .wraper-component2 .mail .wrap a {
+  position: absolute;
+  right: 3rem;
+}
+.footer .wrappercomponent3 {
+  width: 100%;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+}
+.footer .wrappercomponent3 .dropdownbox {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 60%;
+}
+.footer .wrappercomponent3 .dropdownbox .region .select .custom-arrow {
+  right: 1rem;
+}
+.footer .wrappercomponent3 .dropdownbox .region, .footer .wrappercomponent3 .dropdownbox .language {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  padding: 0.7rem 0;
+  font-size: 1.8rem;
+  color: rgb(104, 103, 103);
+  gap: 0.5rem;
+}
+.footer .wrappercomponent3 .dropdownbox .region .select, .footer .wrappercomponent3 .dropdownbox .language .select {
+  width: 100%;
+  position: relative;
+}
+.footer .wrappercomponent3 .dropdownbox .region .select select, .footer .wrappercomponent3 .dropdownbox .language .select select {
+  padding: 1rem 1.5rem 1rem 1rem;
+  font-size: 1.8rem;
+  border: 0.1rem solid rgb(104, 103, 103);
+  background-color: transparent;
+  margin-top: 0.5rem;
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+}
+.footer .wrappercomponent3 .dropdownbox .region .select select:focus, .footer .wrappercomponent3 .dropdownbox .language .select select:focus {
+  outline: none;
+}
+.footer .wrappercomponent3 .dropdownbox .region .select select option, .footer .wrappercomponent3 .dropdownbox .language .select select option {
+  width: 100%;
+  font-size: 1.2rem;
+  padding: 0.8rem;
+}
+.footer .wrappercomponent3 .dropdownbox .region .select .custom-arrow, .footer .wrappercomponent3 .dropdownbox .language .select .custom-arrow {
+  position: absolute;
+  display: block;
+  height: 100%;
+  width: 1.5rem;
+  pointer-events: none;
+  top: 0;
+  right: 2rem;
+}
+.footer .wrappercomponent3 .dropdownbox .region .select .custom-arrow::before, .footer .wrappercomponent3 .dropdownbox .region .select .custom-arrow::after, .footer .wrappercomponent3 .dropdownbox .language .select .custom-arrow::before, .footer .wrappercomponent3 .dropdownbox .language .select .custom-arrow::after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 0;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.footer .wrappercomponent3 .dropdownbox .region .select .custom-arrow::before, .footer .wrappercomponent3 .dropdownbox .language .select .custom-arrow::before {
+  border-left: 0.5rem solid transparent;
+  border-right: 0.5rem solid transparent;
+  border-top: 0.5rem solid black;
+}
+.footer .wrappercomponent3 .dropdownbox .region .select .reg-drop, .footer .wrappercomponent3 .dropdownbox .language .select .reg-drop {
+  width: 100%;
+}
+.footer .wrappercomponent3 .dropdownbox .region .select .lan-drop, .footer .wrappercomponent3 .dropdownbox .language .select .lan-drop {
+  width: 80%;
+  margin-left: 2rem;
+}
+.footer .wrappercomponent3 .dropdownbox .region .select .lan-drop option, .footer .wrappercomponent3 .dropdownbox .language .select .lan-drop option {
+  width: 100%;
+}
+.footer .wrappercomponent3 .dropdownbox .payment {
+  text-align: center;
+}
+.footer .wrappercomponent3 .dropdownbox .payment p {
+  font-size: 1.8rem;
+}/*# sourceMappingURL=footer.css.map */

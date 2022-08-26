@@ -6,6 +6,8 @@ use App\Models\Products;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 
+use function Symfony\Component\String\b;
+
 class ProductsController extends Controller
 {
     /**
@@ -17,6 +19,9 @@ class ProductsController extends Controller
     {
         if(isset($request->price_range)){
             $range = explode('-', str_replace(' ', '', str_replace('$', '', $request->price_range)));
+            foreach($range as &$item){
+                $item = (float)$item;
+            }
         }
         
         //tut bil Richmond i nadelal cringe
@@ -79,16 +84,38 @@ class ProductsController extends Controller
             ->join('product_images', 'products.id', '=', 'product_images.product_id')
             ->join('product_categories', 'products.id', '=', 'product_categories.product_id')
             ->join('categories', 'product_categories.category_id', 'categories.id')
-            ->select('products.*', 'categories.name as category_name', 'product_images.image')
-            ->whereRaw($raw_where);
+            ->select('products.*', 'categories.name as category_name', 'product_images.image');
             // ->orWhere($where_query);
-            
+        
+        if(isset($request->sort_by)){
+            switch($request->sort_by){
+                case 'best':
+                    $products->inRandomOrder();
+                    break;
 
-        $products = $products->get();
+                case 'price_asc':
+                    // $products->orderBy('products.price', 'asc');
+                    $products->orderBy('products.price', 'asc');
+                    break;
+                case 'price_desc':
+                    // $products->orderBy('products.price', 'desc');
+                    $products->orderBy('products.price', 'desc');
+                    break;
+            }
+        }
+
+        // dd($products->toSql());
         
         if(isset($range))
-            $products->whereBetween('products.price', $range);
+            $products->whereBetween('products.price', [5,20]);
 
+        $products->whereRaw($raw_where);
+
+        $products = $products->get();
+
+        // $product_prices = DB::table('products')->select('price')->get();
+        
+        
         return view('home.catalog', ['products' => $products, 'request' => $request, 'colors' => $available_colors]);
     }
 

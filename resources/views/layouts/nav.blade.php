@@ -12,8 +12,8 @@
                 <p>Black pens</p>
                 <p>Blue pens</p>
                 <p>Red pens</p>
-                <p>About us</p>
-                <p>Gallery</p>
+                <p><a href="{{route('about')}}">About us</a></p>
+                <p><a href="{{route('gallery')}}">Gallery</a></p>
                 <div class="bottom">
                     @if(!Auth::check())
                         <div class="login_box">

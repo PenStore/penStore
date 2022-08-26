@@ -38,7 +38,7 @@ Route::get('/account', [UserController::class, 'index'])->name('account');
 Route::get('/catalog', [ProductsController::class, 'index'])->name('catalog');
 Route::get('/about', function() {
     return view('home.about');
-});
+})->name('about');
 Route::get('/gallery', function() {
     return view('home.gallery');
-});
+})->name('gallery');

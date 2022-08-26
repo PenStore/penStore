@@ -22,44 +22,56 @@ class ProductsController extends Controller
         //tut bil Richmond i nadelal cringe
         //this is soooooooo scringe soultion, please no hate. I got brain dmg after 12h coding
 
-        $raw_where = "(product_images.main_image = 1) AND ";
-        if(isset($request->color_0))
-            $raw_where .= "(categories.name = 'Blue') OR ";
-
-        if(isset($request->color_1))
-            $raw_where .= "(categories.name = 'Black') OR ";
-
-        if(isset($request->color_2))
-            $raw_where .= "(categories.name = 'Red') OR ";
-        
-
-        if(isset($request->out_of_stock))
-            $raw_where .= '(products.quantity = 0) OR ';
-
-        if(isset($request->in_stock))
-            $raw_where .= '(products.quantity > 0)';
+        $raw_where = "(product_images.main_image = 1) AND (";
+        $raw_where_temp = '';
+        $is_added_new_where = false;     
 
 
+        // for($i = 0; $i <)
+        if(isset($request->color_0)){
+            $raw_where_temp .= "categories.name = 'Black' OR ";
+            $is_added_new_where = true;
+        }
+        if(isset($request->color_1)){
+            $raw_where_temp .= "categories.name = 'Red' OR ";
+            $is_added_new_where = true;
+        }
+            if(isset($request->color_2)){
+            $raw_where_temp .= "categories.name = 'Blue' OR ";
+            $is_added_new_where = true;
+        }
+        if(isset($request->color_3)){
+            $raw_where_temp .= "categories.name = 'Green' OR ";
+            $is_added_new_where = true;
+        }
+        if(isset($request->out_of_stock)){
+            $raw_where_temp .= 'products.quantity = 0 OR ';
+            $is_added_new_where = true;
+        }
+        if(isset($request->in_stock)){
+            $raw_where_temp .= 'products.quantity > 0';
+            $is_added_new_where = true;
+        }
+
+        $raw_where .= $raw_where_temp;
+        $raw_where = trim($raw_where);
                     
         if(trim(substr($raw_where, -3)) == "OR")
-            $raw_where = substr($raw_where, 0, -4);
-
+            $raw_where = substr($raw_where, 0, -3);
         
-        
-        if(substr($raw_where, -4) == "AND "){
-            $raw_where = substr($raw_where, 0, -4);
+        if(substr($raw_where, -5) == "AND ("){
+            $raw_where = substr($raw_where, 0, -5);
         }
 
         
-        $raw_where = trim($raw_where);
-
-            
+        
+        if($is_added_new_where)
+            $raw_where .= ")";
+        
         // product_images.main_image = 1 AND (categories.name = 'Blue' OR categories.name = 'Red' OR categories.name = 'Black' OR products.quantity = 0 OR )"
 
-        $available_colors = DB::table('products')
-            ->join('product_categories', 'products.id', 'product_categories.product_id')
-            ->join('categories', 'product_categories.category_id', 'categories.id')
-            ->select('categories.name')
+        $available_colors = DB::table('categories')
+            ->select('name')
             ->get();
 
 
@@ -70,10 +82,14 @@ class ProductsController extends Controller
             ->select('products.*', 'categories.name as category_name', 'product_images.image')
             ->whereRaw($raw_where);
             // ->orWhere($where_query);
+            
+
+        $products = $products->get();
+        
         if(isset($range))
             $products->whereBetween('products.price', $range);
 
-        return view('home.catalog', ['products' => $products->get(), 'request' => $request, 'colors' => $available_colors]);
+        return view('home.catalog', ['products' => $products, 'request' => $request, 'colors' => $available_colors]);
     }
 
     /**

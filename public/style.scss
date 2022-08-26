@@ -130,6 +130,7 @@
 	display: none; 
 	flex-direction: column;
 	position: absolute;
+	z-index: 110;
 	width: 100%;
 	top: 94px;
 	background-color: white;
@@ -408,6 +409,10 @@
 	display: block;
 }
 
+.sort_by > span{
+	display: block;
+}
+
 @media only screen and (min-width: 200px) {
 	#app {
 		width: 100%;
@@ -431,6 +436,7 @@
 	#app {
 		width: 60%;
 		margin: auto;
+		position: relative;
 	}
 }
 @media only screen and (min-width: 2100px) {

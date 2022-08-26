@@ -2,6 +2,15 @@
 #app {
 	margin: auto;
 }
+
+
+.py-4{
+	margin-bottom: 10vh;
+}
+
+.payment > svg{
+	padding: 30px;
+}
 .alertbox {
 	padding: 8px;
 	text-align: center;
@@ -406,11 +415,12 @@
 }
 .active
 {
-	display: block;
+	display: block !important;
 }
 
 .sort_by > span{
 	display: block;
+	padding: 10px;
 }
 
 @media only screen and (min-width: 200px) {

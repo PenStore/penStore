@@ -145,6 +145,10 @@
             quantity += 1;
             $(".quantity_val").html(quantity);
         });
+
+        $('.add-to-cart').click(function(){
+            alert(1);
+        });
     });
 </script>
 @endsection

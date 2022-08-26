@@ -74,7 +74,7 @@
     </div>
 </div>
 <div id="search_box">
-    <input type="search" placeholder="Search..." >
+    <input type="search" id="search_input" placeholder="Search..." >
     <svg id="search_close" class="close" width="17" height="17" viewBox="0 0 17 17" fill="none" xmlns="http://www.w3.org/2000/svg">
         <path d="M9.06066 8.35355L16.7071 0.707107L16 0L8.35355 7.64645L0.707108 0L0 0.707107L7.64645 8.35355L0 16L0.707107 16.7071L8.35355 9.06066L16 16.7071L16.7071 16L9.06066 8.35355Z" fill="black"/>
     </svg>
@@ -82,7 +82,7 @@
 <div id="basket_content">
     <div class="header">
         <h1>Your cart</h1>
-        <a href="#">Continu Shoping</a>
+        <a href="{{route('catalog')}}">Continue Shoping</a>
     </div>
     <div class="content_start">
         <p>PRODUCT</p>
@@ -111,6 +111,13 @@
     </div>
 </div> 
 <script>
+
+    $(document).click(function(event){
+        console.log(event.target.id);
+        if(event.target.id != 'search_open' && event.target.id != 'search_box' && event.target.id != 'search_input')
+            $('#search_box').hide();
+    });
+
     document.getElementById("toggleDropdown").addEventListener("click", toggleDropdownMenu);
     document.getElementById("search_open").addEventListener("click", openSearch);
     document.getElementById("search_close").addEventListener("click", closeSearch);

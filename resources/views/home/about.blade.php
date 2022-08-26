@@ -1,10 +1,11 @@
+@extends('layouts.app')
 <link rel="stylesheet" href="about.css">
-<body>
+@section('content')
     <section class="about">
         <div class="flex-img">
-            <img src="{{asset('penimg.png')}}" alt="" class="image">
-            <img src="{{asset('penimg2.webp')}}" alt="" class="image">
-            <img src="{{asset('penimg3.jpg')}}"alt="" class="image">
+            <img src="https://images.unsplash.com/photo-1605641987825-c1664626d79f?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2940&q=80" alt="" class="image">
+            <img src="https://images.unsplash.com/photo-1600025281696-a38d928e6453?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2787&q=80" alt="" class="image">
+            <img src="https://images.unsplash.com/photo-1605641987901-77d82814989d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=987&q=80"alt="" class="image">
         </div>
 
         <div class="about-content">
@@ -41,4 +42,4 @@
         </div>
 
     </section>
-</body>
+@endsection

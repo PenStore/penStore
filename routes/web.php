@@ -36,3 +36,6 @@ Route::get('/product/{id}', [ProductsController::class, 'show'])->name('showProd
 Route::get('/admin', [AdminController::class, 'index'])->middleware('isUserAdmin');
 Route::get('/account', [UserController::class, 'index'])->name('account');
 Route::get('/catalog', [ProductsController::class, 'index'])->name('catalog');
+Route::get('/about', function() {
+    return view('home.about');
+});
